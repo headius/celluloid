@@ -43,6 +43,7 @@ def format(float)
   "%0.2f" % float
 end
 
+(ARGV[0] || 10).to_i.times do
 puts "---"
 puts "actor_benchmarks:"
 # How quickly can we create actors?
@@ -77,3 +78,4 @@ time = Benchmark.measure do
 end.real
 
 puts "  messages_per_second: #{format 1 / time * messages}"
+end

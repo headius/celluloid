@@ -14,6 +14,7 @@ def format(float)
   "%0.2f" % float
 end
 
+(ARGV[0] || 10).to_i.times do
 puts "mailbox:"
 
 mailbox  = Celluloid::Mailbox.new
@@ -29,3 +30,4 @@ time = measure(messages) do
 end
 
 puts "  messages_per_second: #{format time}"
+end
